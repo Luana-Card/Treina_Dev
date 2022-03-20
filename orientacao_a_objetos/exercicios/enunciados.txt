@@ -1,0 +1,47 @@
+Exercício - 01
+Crie as outras duas classes do nosso exemplo. Professor deve ter um nome e um
+código de funcionário. Já a turma deve ter nome, o número da sala e o professor
+responsável. Cada classe deve ser criada em um arquivo diferente:
+professor.rb e turma.rb.
+
+Exercício - 02
+Criamos o método inicia_ferias e agora você pode criar o método
+encerra_ferias. Mas além de alterar o valor do atributo @ferias, vamos criar
+dois novos atributos: @data_inicio_ferias e @data_fim_ferias. Esses
+dois atributos devem ser atualizados nos métodos inicia_ferias e
+encerra_ferias.
+Uma das formas de obter a data atual em Ruby é usar a classe Time. O método
+Time.now() retorna o dia e hora atual do seu computador.
+
+Exercício - 03
+Crie um método total_alunos que imprima a quantidade total de alunos de
+uma turma. Leia mais sobre sobre os métodos de arrays na documentação oficial
+do Ruby.
+
+Exercício - 04
+Adicione na classe Funcionario um método chamado imprime que deve
+imprimir na tela (com uso do puts) as informações do funcionário. Em seguida,
+abra o IRB e crie objetos de Funcionario e de Professor e faça chamadas
+do seu novo método.
+Quando estiver tudo funcionando, acrescente o método imprime também em
+Professor para imprimir, além das informações herdadas de funcionário, a
+disciplina do professor.
+O resultado final deve ser parecido com isso no seu Terminal:
+require_relative 'funcionario'
+=> true
+require_relative 'professor'
+=> true
+carlos = Funcionario.new('Carlos', 123)
+=> #<Funcionario:0x00007fe905159f78 @nome="Carlos",
+@codigo_funcionario=123, @ferias=false>
+tereza = Professor.new('Tereza', 123, 'Ciências')
+=> #<Professor:0x00007fe9051601c0 @nome="Tereza",
+@codigo_funcionario=123, @ferias=false,
+@disciplina="Ciências">
+carlos.imprime()
+Funcionário Carlos - Código 123 - Férias: false
+=> nil
+tereza.imprime()
+Professor Tereza - Código 123 - Férias: false -
+Disciplina Ciências
+=> nil
